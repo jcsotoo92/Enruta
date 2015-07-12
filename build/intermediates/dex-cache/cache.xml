@@ -2,277 +2,277 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.0.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-b618370bb6aadc46534edbccbccd8b7ac7e0d8ee.jar" />
-    </item>
-    <item
         jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-android\1.17.0-rc\f3fc9acc57c2a55fd17a421710f564b73dabda21\google-http-client-android-1.17.0-rc.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="f3fc9acc57c2a55fd17a421710f564b73dabda21">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\google-http-client-android-1.17.0-rc-da8bc00f5676242e85db887591535fa0c1c48b67.jar" />
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\google-http-client-android-1.17.0-rc-da8bc00f5676242e85db887591535fa0c1c48b67.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.0.0\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.0.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-f68f2cf4acaa08a724384a507adab3139fad48fa.jar" />
-    </item>
-    <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.0.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-6e7486e1ba2f5f1384098ed393a60d00cd5df366.jar" />
-    </item>
-    <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.2.2\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="803c4c913beac8f7980d680c725a40835d1d7c77">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-e1d6c622a06709887afd45c28c3d5e39df275e55.jar" />
+        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-f65e667e6c93389934f424356f96bfdd622e2654.jar" />
     </item>
     <item
         jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-jackson\1.15.0-rc\77f6f2076dff445432bf77e43a83d77be65b22ae\google-http-client-jackson-1.15.0-rc.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="77f6f2076dff445432bf77e43a83d77be65b22ae">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\google-http-client-jackson-1.15.0-rc-ac1dda449303aaf52f61f2b4e1137f7e069856d0.jar" />
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\google-http-client-jackson-1.15.0-rc-ac1dda449303aaf52f61f2b4e1137f7e069856d0.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.0.0\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\libs\internal_impl-22.1.1.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="055783146ba9654a725442563be78cad303aad1f">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-cce6c08d13e24035272f8ad91714b6a1e4a2df44.jar" />
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-df13a268d6950bb83f57a33881a5162dad60d47b.jar" />
     </item>
     <item
         jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\1.3.9\40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf\jsr305-1.3.9.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\jsr305-1.3.9-5a9b0e6409d59df8350d5ab55d4416be5f17ed19.jar" />
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\jsr305-1.3.9-5a9b0e6409d59df8350d5ab55d4416be5f17ed19.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.0.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="e0b0c35d02308b270015a74cada4887e2e49b889">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-9deef17e706536c862784f888e60d9c7fbbb4a6e.jar" />
+        sha1="055783146ba9654a725442563be78cad303aad1f">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-2519cef360c4565afc3a774997fb5380d9bb8f56.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.1.1\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-58d1477ff8d9eeeda711d417fc5811567b2231e9.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-a635e58ae04cd7d8722319cca08d0431ba0122ff.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.1.1\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="22886d910315028a2b34b1ba068c265534ade87a">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-9c635f196e74e523337cb836e80a7404abfda309.jar" />
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-7acfe89be11885b05172890e5267fdbc86282148.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.getbase\floatingactionbutton\1.9.0\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.getbase\floatingactionbutton\1.9.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="f2b8a750df2a5d485d0c40b379b44371c5e6d98d">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-4dd38c2d5998edcbc03ef50886f3fc832bf35a7e.jar" />
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-994cc97d1a2ebfb533be356e8eb4eb0fb5195aef.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.3.4\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.0.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="cf251baf39f5c5138224b67b4106eb6331abbd13">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-5450375ae48b43804d0ac398d127660369c9d938.jar" />
+        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-328905b1578777f8aefc98d4159a93f92dafd29c.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.0.0\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-c0a47d37182c645f8cfbb6481334d15cd913da0b.jar" />
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-cdc7857610ffa4c8e79d01cdf51a6c505f34c84c.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.0.0\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.0.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-c1e94745653235529462e7538de9d6dde75524a8.jar" />
+        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-0bb88f0f948a474517b2d13381b7c72108e8ec34.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.0.0\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.0.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-5029657fa31aaa804be42f27dd6f618cc60d5180.jar" />
+        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-f6c6cc623a5fa12b7a6d7d01edd8675495810dbb.jar" />
     </item>
     <item
         jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client\1.18.0-rc\880ad30d2b249a7591c195c2392646f1b146c139\google-http-client-1.18.0-rc.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="880ad30d2b249a7591c195c2392646f1b146c139">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\google-http-client-1.18.0-rc-c7ed19143ce1d8f91a25caf9a112939415bbeb47.jar" />
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\google-http-client-1.18.0-rc-c7ed19143ce1d8f91a25caf9a112939415bbeb47.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.0.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-c43b9bd966ad76cb400675030ec3106145c4fbd4.jar" />
-    </item>
-    <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.0.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-9c3587c58cae459db54e531b502af7257ced01e9.jar" />
-    </item>
-    <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.0.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-7274752f0db5d87b423b048d31f28860defda2b3.jar" />
-    </item>
-    <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.0.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-83f06780eb3247a7f5b85f534216f51375dd45c9.jar" />
-    </item>
-    <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.github.dmytrodanylyk.shadow-layout\library\1.0.3\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.github.dmytrodanylyk.shadow-layout\library\1.0.3\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="6625ecb586cdd40f3e160486368e5251630899c9">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-b79f0c84df6304ff42761a1a61f66c5d414c0382.jar" />
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-b59d303800a3b3f068835cbd0f2bd3346d26f275.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-857f9fe2021695f8317bc5987832f99aba1d9456.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e0b0c35d02308b270015a74cada4887e2e49b889">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-50909e5a248a378d6fe356512dee16f17aa916e3.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-2558316f889baafd31148d33cda7aecd37a27f4c.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.2.2\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="803c4c913beac8f7980d680c725a40835d1d7c77">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-77722b13524faf14e123213f02a67cffb470aeb3.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-54f6d76449a1f5ea9dec2f90e4227b8e31e2c357.jar" />
     </item>
     <item
         jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.1\2e66da15851f9f5b5079228f856c2f090ba98c38\gson-2.1.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="2e66da15851f9f5b5079228f856c2f090ba98c38">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\gson-2.1-0181781115c5f1ef588fd2036d55e1537d724fa6.jar" />
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\gson-2.1-0181781115c5f1ef588fd2036d55e1537d724fa6.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-d7861f76901c7dd98f52ecf1261d29ad62c9086c.jar" />
     </item>
     <item
         jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-gson\1.17.0-rc\3696033c14cc5ce68fe3ac818bade2707df9c2cd\google-http-client-gson-1.17.0-rc.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="3696033c14cc5ce68fe3ac818bade2707df9c2cd">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\google-http-client-gson-1.17.0-rc-a2cf9afb2688786c85c7f848f7cf1e57bd80e8f5.jar" />
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\google-http-client-gson-1.17.0-rc-a2cf9afb2688786c85c7f848f7cf1e57bd80e8f5.jar" />
     </item>
     <item
         jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.google.oauth-client\google-oauth-client\1.18.0-rc\30281a66559f60a491748974ac17cec3483b873\google-oauth-client-1.18.0-rc.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="030281a66559f60a491748974ac17cec3483b873">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\google-oauth-client-1.18.0-rc-18ba2c19f214ac75f2f37a745cce7ea90f23a37a.jar" />
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\google-oauth-client-1.18.0-rc-18ba2c19f214ac75f2f37a745cce7ea90f23a37a.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.0.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-2ab2817dbe7f3154aaa97a3ca7778e1ea22112f5.jar" />
+        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-902eed44b9b903f987b1d629da685160fed20c95.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.0.0\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.0.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-4c52214cc65e9bef1737b6d64b490da57ea8efb8.jar" />
+        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-ef142b8b92ba6faf96306d8acb3ff8542336b85b.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.0.0\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.0.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-9dbba73806a1e6c32a3e81c6c19785d4823224d6.jar" />
+        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-6025ffda4e892ea503c6525fd9f3a7acfbba864b.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\libs\internal_impl-22.1.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-f1d5124e06a8ce1b2481868ffa52526ec0016051.jar" />
-    </item>
-    <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-d3fa5e2c8db493d49a14a0fe4c0d02003f5ca953.jar" />
-    </item>
-    <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.0.0\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.0.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-015d4f682f1a45c61dbdf79b6ff9eaa9cd18ded6.jar" />
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-beaaa08f3c6e6e6d4a2d9d6ff163b0a134d7eef7.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-989b05515d63d665f7fc8d31a567027dc538b5bc.jar" />
     </item>
     <item
         jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\org.codehaus.jackson\jackson-core-asl\1.9.11\e32303ef8bd18a5c9272780d49b81c95e05ddf43\jackson-core-asl-1.9.11.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="e32303ef8bd18a5c9272780d49b81c95e05ddf43">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\jackson-core-asl-1.9.11-c2a4202a453a17fef05823bfc167d1e99de9a0a2.jar" />
-    </item>
-    <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.0.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-2343987f62c81d05653821eaefd473ec1732ca66.jar" />
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\jackson-core-asl-1.9.11-c2a4202a453a17fef05823bfc167d1e99de9a0a2.jar" />
     </item>
     <item
         jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client-android\1.17.0-rc\cfef30e5d361e2fd2892eed93a183db48dcae153\google-api-client-android-1.17.0-rc.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="cfef30e5d361e2fd2892eed93a183db48dcae153">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\google-api-client-android-1.17.0-rc-6415132ce0a0a12ab03d9c6ee46ba4ba7260ca22.jar" />
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\google-api-client-android-1.17.0-rc-6415132ce0a0a12ab03d9c6ee46ba4ba7260ca22.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.0.0\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.0.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-df50fe4e5dc99a8edc1c709b52dcd7761d215a64.jar" />
+        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-ed5284ca8b7eba1b91a9beb53802b4e41f5ccd6b.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.0.0\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.0.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-2531fb78124c8fca0edadd6da85ae15315fce346.jar" />
+        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-9f777bfa08e862ff17b0dd3dbba56843f85dff72.jar" />
     </item>
     <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.0.0\classes.jar"
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.3.4\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="cf251baf39f5c5138224b67b4106eb6331abbd13">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-556bd181de1eec3fc9396ddb425841a0a1943ab0.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-89abc21f6bac3423ef53c7090637e9c1918effcb.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\Desktop\Enruta\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.0.0\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-b5918f6260281e739a2b816e393eb65a243629e8.jar" />
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\classes-c66ce5b449aee779bcc0c2182258a958537d7e42.jar" />
     </item>
     <item
         jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client\1.18.0-rc\45b0d00b78197d8a3047751443c09538117d188b\google-api-client-1.18.0-rc.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="45b0d00b78197d8a3047751443c09538117d188b">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\google-api-client-1.18.0-rc-9706cba1dbd2e6f42bd3d6f9a5b7c69cbfce7716.jar" />
-    </item>
-    <item
-        jar="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.0.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\classes-0d9c46bd919c3c004c24e240877c1b2642bcf815.jar" />
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\google-api-client-1.18.0-rc-9706cba1dbd2e6f42bd3d6f9a5b7c69cbfce7716.jar" />
     </item>
     <item
         jar="C:\Users\User\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
-        <dex dex="C:\Users\User\Desktop\enruta final\Enruta3\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-af0d5db4e60e2a92bdde6a91214c9dc481851714.jar" />
+        <dex dex="C:\Users\User\Desktop\Enruta\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-af0d5db4e60e2a92bdde6a91214c9dc481851714.jar" />
     </item>
 
 </items>

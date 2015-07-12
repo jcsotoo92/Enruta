@@ -134,7 +134,9 @@ public class MainActivity extends ActionBarActivity
                     }
                     ponerMarkersOrigenDestino(new LatLng(latlng[0], latlng[1]), split[0], descripcion);
                 }
-                ponerMarkersOrigenDestino(new LatLng(latlng[0], latlng[1]), "", "");
+                LatLng latLng=new LatLng(latlng[0], latlng[1]);
+                ponerMarkersOrigenDestino(latLng, "", "");
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 13));
                 autoCompleteTextView.setText("");
             }
         });
