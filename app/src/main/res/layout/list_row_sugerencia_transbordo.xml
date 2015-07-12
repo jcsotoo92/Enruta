@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/list_row_image"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:src="@drawable/ic_drawer"
+            android:layout_marginLeft="40dp"/>
+
+        <!--  listrow  -->
+        <LinearLayout android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/list_row_image">
+
+            <TextView
+                android:id="@+id/tituloRutaT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:textColor="#040404"
+                android:typeface="sans"
+                android:textSize="18dp"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/distanciaRutaT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="250madssdasd"
+                android:layout_below="@id/tituloRutaT"/>
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/barra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:layout_toRightOf="@id/thumbnail"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"/>
+
+        <LinearLayout android:id="@+id/thumbnail2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/barra">
+
+            <TextView
+                android:id="@+id/tituloTransbordo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:textColor="#040404"
+                android:typeface="sans"
+                android:textSize="18dp"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/distanciaTranbsbordo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="250madssdasd"
+                android:layout_below="@id/tituloTransbordo"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

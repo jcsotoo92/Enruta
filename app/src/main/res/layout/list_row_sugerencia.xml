@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="horizontal"
+    android:padding="5dip" >
+    <ImageView
+        android:id="@+id/list_row_image"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:src="@drawable/ic_drawer"
+        android:layout_marginLeft="40dp"/>
+
+    <!--  listrow  -->
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="3dip"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/list_row_image">
+
+        <TextView
+            android:id="@+id/tituloRuta"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:textColor="#040404"
+            android:typeface="sans"
+            android:textSize="18dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/distanciaRuta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tituloRuta"/>
+
+
+    </LinearLayout>
+
+    <!-- titulo de la categoria -->
+
+
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ex.saulantonio.enruta3.SlidingRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <com.dd.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:sl_shadowRadius="4dp"
+        app:sl_shadowColor="@color/shadow"
+        app:sl_dx="0dp"
+        app:sl_dy="0.5dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ListView
+            android:id="@android:id/list"
+            android:tag="list"
+           android:background="@color/text_color"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_height="200dp"/>
+    </com.dd.ShadowLayout>
+</com.ex.saulantonio.enruta3.SlidingRelativeLayout>
