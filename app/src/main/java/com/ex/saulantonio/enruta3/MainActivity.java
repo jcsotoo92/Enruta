@@ -87,7 +87,7 @@ public class MainActivity extends ActionBarActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        refresh = (ImageButton) findViewById(R.id.menuRefresh);
+        refresh = (ImageButton) findViewById(R.id.Refresh);
         imageButton = (FloatingActionButton) findViewById(R.id.myLocationButton);
         runButton = (FloatingActionButton) findViewById(R.id.mainRun);
         autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.autocompletado);
@@ -99,7 +99,15 @@ public class MainActivity extends ActionBarActivity
         toolbar.setTitle("Enruta");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
+        refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mMap!=null)
+                 mMap.clear();
+                origen= null;
+                destino= null;
+            }
+        });
         runButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -318,6 +326,7 @@ public class MainActivity extends ActionBarActivity
         ocultar.setVisibility(LinearLayout.GONE);
         imageButton.setVisibility(View.GONE);
         runButton.setVisibility(View.GONE);
+        refresh.setVisibility(View.GONE);
     }
 
     private void mostrarElementos() {
@@ -327,6 +336,7 @@ public class MainActivity extends ActionBarActivity
         autoCompleteTextView.setText("");
         imageButton.setVisibility(View.VISIBLE);
         runButton.setVisibility(View.VISIBLE);
+        refresh.setVisibility(View.VISIBLE);
     }
 
 
@@ -366,13 +376,7 @@ public class MainActivity extends ActionBarActivity
 
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.myswitch) {
-            Log.d("fojeowjoegwjwo","SOTOOOOOOOOOOOOOO");
-            mMap.clear();
-            origen= null;
-            destino= null;
-            return true;
-        }
+
         return super.onOptionsItemSelected(item);
     }
 
