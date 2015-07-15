@@ -56,7 +56,6 @@ public class MainActivity extends ActionBarActivity
     boolean sugerencia = false;
     AutoCompleteTextView autoCompleteTextView;
     Toolbar toolbar;
-    boolean flagOrigen=false;
     int[] imagenes = {
             R.drawable.ic_drawer,
             R.drawable.ic_drawer,
@@ -167,9 +166,13 @@ public class MainActivity extends ActionBarActivity
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                flagOrigen=true;
+                /*if(origen!=null) {
+                    origen.remove();
+                    origen=null;
+                }
+                else
+                    origen=null;*/
                 getMyLocation();
-
             }
         });
         mMap.setOnMarkerDragListener(new GoogleMap.OnMarkerDragListener() {
@@ -242,7 +245,7 @@ public class MainActivity extends ActionBarActivity
             String city = addresses.get(0).getLocality();
             result = address + " " + city;
         }
-        return result;
+        return result+"";
     }
 
     @Override
@@ -307,26 +310,17 @@ public class MainActivity extends ActionBarActivity
                 markerOption.position(latLng);
                 origen = mMap.addMarker(markerOption);
             } else {
-                if (destino == null && !flagOrigen) {
+                if (destino == null) {
                     markerOption.draggable(true);
                     markerOption.position(latLng);
                     markerOption.icon(BitmapDescriptorFactory.fromResource(R.drawable.destino));
                     destino = mMap.addMarker(markerOption);
                 } else {
-                    if(flagOrigen){
-                        origen.remove();
-                        markerOption.draggable(true);
-                        markerOption.position(latLng);
-                        markerOption.icon(BitmapDescriptorFactory.fromResource(R.drawable.origen));
-                        origen = mMap.addMarker(markerOption);
-                        flagOrigen=false;
-                    }else{
-                        destino.remove();
-                        markerOption.draggable(true);
-                        markerOption.position(latLng);
-                        markerOption.icon(BitmapDescriptorFactory.fromResource(R.drawable.destino));
-                        destino = mMap.addMarker(markerOption);
-                    }
+                    destino.remove();
+                    markerOption.draggable(true);
+                    markerOption.position(latLng);
+                    markerOption.icon(BitmapDescriptorFactory.fromResource(R.drawable.destino));
+                    destino = mMap.addMarker(markerOption);
                 }
             }
 
