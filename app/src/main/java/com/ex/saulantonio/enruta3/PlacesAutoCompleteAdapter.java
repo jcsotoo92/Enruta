@@ -13,6 +13,9 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.model.LatLng;
+import com.google.maps.android.SphericalUtil;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -23,6 +26,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 public class PlacesAutoCompleteAdapter extends ArrayAdapter<Lugares> implements Filterable {
     private ArrayList  <Lugares> resultList = new ArrayList<>();
@@ -34,7 +38,7 @@ public class PlacesAutoCompleteAdapter extends ArrayAdapter<Lugares> implements 
     private static final String TYPE_DETAILS = "/details";
     private static final String OUT_JSON = "/json";
     private static final String API_KEY = "AIzaSyBNiZ1zulMPbB-B1aJkvCgRQECrCiNCMLE";
-
+    private getLatLng task;
     public PlacesAutoCompleteAdapter(Context context, int textViewResourceId) {
         super(context, textViewResourceId);
         mContext = context;
@@ -83,7 +87,13 @@ public class PlacesAutoCompleteAdapter extends ArrayAdapter<Lugares> implements 
                 FilterResults filterResults = new FilterResults();
                 if (constraint != null) {
                     // Recibe los valores del autocompletado
-                    resultList = autocomplete(constraint.toString());
+                    try {
+                        resultList = autocomplete(constraint.toString());
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     // Assign the data to the FilterResults
                     filterResults.values = resultList;
                     filterResults.count = resultList.size();
@@ -103,7 +113,7 @@ public class PlacesAutoCompleteAdapter extends ArrayAdapter<Lugares> implements 
         return filter;
     }
 
-    public ArrayList<Lugares> autocomplete(String input) {
+    public ArrayList<Lugares> autocomplete(String input) throws ExecutionException, InterruptedException {
         ArrayList<Lugares> resultList = null;
         HttpURLConnection connec = null;
         StringBuilder jsonResults = new StringBuilder();
@@ -135,6 +145,9 @@ public class PlacesAutoCompleteAdapter extends ArrayAdapter<Lugares> implements 
             }
         }
 
+
+
+
         try {
             Log.d("Rsult", jsonResults.toString());
             JSONObject jsonObj = new JSONObject(jsonResults.toString());
@@ -142,8 +155,12 @@ public class PlacesAutoCompleteAdapter extends ArrayAdapter<Lugares> implements 
             // Extract the Place descriptions from the results
             ArrayList result = new ArrayList<String>(predsJsonArray.length());
             resultList  = new ArrayList<Lugares>();
+            task = new getLatLng();
             for (int i = 0; i < predsJsonArray.length(); i++) {
-                resultList.add(new Lugares(predsJsonArray.getJSONObject(i).getString("description"),predsJsonArray.getJSONObject(i).getString("place_id")));
+                Double[] latlng = task.execute(predsJsonArray.getJSONObject(i).getString("place_id")).get();
+                if(SphericalUtil.computeDistanceBetween(new LatLng(27.48389, -109.932402),new LatLng(latlng[0],latlng[1]))<19000){
+                    resultList.add(new Lugares(predsJsonArray.getJSONObject(i).getString("description"),predsJsonArray.getJSONObject(i).getString("place_id")));
+                }
             }
             //Obtiene el nombre del lugar del json
             //  resultList = new ArrayList<String>(predsJsonArray.length());

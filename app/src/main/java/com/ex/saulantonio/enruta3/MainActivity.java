@@ -234,8 +234,6 @@ public class MainActivity extends ActionBarActivity
         enrutamiento();*///TERMINA SOTO
     }
     public void hideSoftKeyboard() {
-
-
         InputMethodManager inputManager = (InputMethodManager) MainActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
         inputManager.hideSoftInputFromWindow(MainActivity.this.getCurrentFocus().getWindowToken(), 0);
     }
