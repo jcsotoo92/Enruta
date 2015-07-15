@@ -155,8 +155,9 @@ public class PlacesAutoCompleteAdapter extends ArrayAdapter<Lugares> implements 
             // Extract the Place descriptions from the results
             ArrayList result = new ArrayList<String>(predsJsonArray.length());
             resultList  = new ArrayList<Lugares>();
-            task = new getLatLng();
+
             for (int i = 0; i < predsJsonArray.length(); i++) {
+                task = new getLatLng();
                 Double[] latlng = task.execute(predsJsonArray.getJSONObject(i).getString("place_id")).get();
                 if(SphericalUtil.computeDistanceBetween(new LatLng(27.48389, -109.932402),new LatLng(latlng[0],latlng[1]))<19000){
                     resultList.add(new Lugares(predsJsonArray.getJSONObject(i).getString("description"),predsJsonArray.getJSONObject(i).getString("place_id")));
