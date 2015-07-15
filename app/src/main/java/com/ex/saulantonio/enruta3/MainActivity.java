@@ -1,6 +1,8 @@
 package com.ex.saulantonio.enruta3;
 
 
+import android.app.Activity;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.location.Address;
@@ -19,6 +21,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.support.v4.widget.DrawerLayout;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageButton;
@@ -134,7 +137,7 @@ public class MainActivity extends ActionBarActivity
                 }
                 String[] split = null;
                 String descripcion = "";
-                Log.d("hola", latlng[0].toString() + "," + latlng[1].toString());
+                hideSoftKeyboard();
                 if (favoritos) {
                     split = adapter.getItem(position).getNombre().split(",");
                     for (int i = 1; i < split.length; i++) {
@@ -146,6 +149,7 @@ public class MainActivity extends ActionBarActivity
                 ponerMarkersOrigenDestino(latLng, "", "");
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 13));
                 autoCompleteTextView.setText("");
+
             }
         });
 
@@ -229,7 +233,12 @@ public class MainActivity extends ActionBarActivity
         interpolarRuta();
         enrutamiento();*///TERMINA SOTO
     }
+    public void hideSoftKeyboard() {
 
+
+        InputMethodManager inputManager = (InputMethodManager) MainActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputManager.hideSoftInputFromWindow(MainActivity.this.getCurrentFocus().getWindowToken(), 0);
+    }
     public String adressPicker(double lat, double lng) {
         List<Address> addresses = null;
         String result = null;
