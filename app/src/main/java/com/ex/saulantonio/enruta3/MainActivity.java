@@ -2,7 +2,9 @@ package com.ex.saulantonio.enruta3;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.location.Address;
@@ -27,6 +29,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
@@ -75,6 +78,8 @@ public class MainActivity extends ActionBarActivity
     ListaRutas lr;
     int position;
     private static final String LIST_FRAGMENT_TAG = "list_fragment";//TERMINA SOTO
+
+
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
@@ -89,6 +94,7 @@ public class MainActivity extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         refresh = (ImageButton) findViewById(R.id.Refresh);
         imageButton = (FloatingActionButton) findViewById(R.id.myLocationButton);
@@ -109,6 +115,8 @@ public class MainActivity extends ActionBarActivity
                  mMap.clear();
                 origen= null;
                 destino= null;
+
+                getFragmentManager().popBackStack();
             }
         });
         runButton.setOnClickListener(new View.OnClickListener() {
@@ -298,41 +306,45 @@ public class MainActivity extends ActionBarActivity
 
     private void ponerMarkersOrigenDestino(LatLng latLng, String nombre, String descripcion) {
         MarkerOptions markerOption = new MarkerOptions();
-        if (favoritos) {
-            markerOption.draggable(true);
-            markerOption.position(latLng);
-            Marker favorito = mMap.addMarker(markerOption);
-            ocultarElementos();
-            Fragment f = new Favoritos();
-            getSupportFragmentManager().beginTransaction().replace(R.id.map, f).commit();
-            ControladorSQL sqlControl = new ControladorSQL(this);
-            String latlong = latLng.latitude + "," + latLng.longitude;
-            sqlControl.insertarValores(latlong, nombre, descripcion);
-            idRutas = f.getId();
-            favoritos = false;
-        } else {
-            if (origen == null) {
+        if(SphericalUtil.computeDistanceBetween(latLng,new LatLng(27.48389, -109.932402))<=16200){
+            if (favoritos) {
                 markerOption.draggable(true);
-                markerOption.icon(BitmapDescriptorFactory.fromResource(R.drawable.origen));
                 markerOption.position(latLng);
-                origen = mMap.addMarker(markerOption);
+                Marker favorito = mMap.addMarker(markerOption);
+                ocultarElementos();
+                Fragment f = new Favoritos();
+                getSupportFragmentManager().beginTransaction().replace(R.id.map, f).commit();
+                ControladorSQL sqlControl = new ControladorSQL(this);
+                String latlong = latLng.latitude + "," + latLng.longitude;
+                sqlControl.insertarValores(latlong, nombre, descripcion);
+                idRutas = f.getId();
+                favoritos = false;
             } else {
-                if (destino == null) {
+                if (origen == null) {
                     markerOption.draggable(true);
+                    markerOption.icon(BitmapDescriptorFactory.fromResource(R.drawable.origen));
                     markerOption.position(latLng);
-                    markerOption.icon(BitmapDescriptorFactory.fromResource(R.drawable.destino));
-                    destino = mMap.addMarker(markerOption);
+                    origen = mMap.addMarker(markerOption);
                 } else {
-                    destino.remove();
-                    markerOption.draggable(true);
-                    markerOption.position(latLng);
-                    markerOption.icon(BitmapDescriptorFactory.fromResource(R.drawable.destino));
-                    destino = mMap.addMarker(markerOption);
+                    if (destino == null) {
+                        markerOption.draggable(true);
+                        markerOption.position(latLng);
+                        markerOption.icon(BitmapDescriptorFactory.fromResource(R.drawable.destino));
+                        destino = mMap.addMarker(markerOption);
+                    } else {
+                        destino.remove();
+                        markerOption.draggable(true);
+                        markerOption.position(latLng);
+                        markerOption.icon(BitmapDescriptorFactory.fromResource(R.drawable.destino));
+                        destino = mMap.addMarker(markerOption);
+                    }
                 }
             }
-
+        }else{
+            new AlertDialog.Builder(this).setTitle("Cuidado!").setMessage("Esta saliendo de los límites de la ciudad").setPositiveButton("OK", null).show();
         }
     }
+
 
     private void ocultarElementos() {
         LinearLayout ocultar = (LinearLayout) findViewById(R.id.autocompletadoLayout);
@@ -436,17 +448,12 @@ public class MainActivity extends ActionBarActivity
         if (f != null) {
                     getFragmentManager().popBackStack();
                 } else {
-           f         =  SlidingListFragment
-                    .instantiate(this, SlidingListFragment.class.getName());
+            f = SlidingListFragment.instantiate(this, SlidingListFragment.class.getName());
             ((SlidingListFragment)f).setListAdapter(new ListViewSugerencias(this,datos,imagenes));
-                    getFragmentManager().beginTransaction()
-                            .setCustomAnimations(R.animator.slide_up,
-                                    R.animator.slide_down,
-                                    R.animator.slide_up,
-                                    R.animator.slide_down)
-                            .add(R.id.container,f,
-                                    LIST_FRAGMENT_TAG
-                            ).addToBackStack(null).commit();
+            getFragmentManager().beginTransaction().setCustomAnimations(R.animator.slide_up, R.animator.slide_down,
+                    R.animator.slide_up,
+                    R.animator.slide_down)
+                    .add(R.id.container,f,LIST_FRAGMENT_TAG).addToBackStack(null).commit();
         }
     }
 

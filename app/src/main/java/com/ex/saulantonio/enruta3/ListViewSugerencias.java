@@ -52,9 +52,7 @@ public class ListViewSugerencias extends BaseAdapter {
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View itemView;
         if(titulos.get(position).isTieneTransbordo()){
-            Log.d("","ENTRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
             itemView = inflater.inflate(R.layout.list_row_sugerencia_transbordo, parent, false);
-
             // Locate the TextViews in listview_item.xml
             imgImg = (ImageView) itemView.findViewById(R.id.list_row_image);
             ruta = (TextView) itemView.findViewById(R.id.tituloRutaT);
