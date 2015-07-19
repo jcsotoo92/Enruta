@@ -433,6 +433,8 @@ public class MainActivity extends ActionBarActivity
         transaction.remove(fragmentManager.findFragmentById(idRutas));
         transaction.commit();
         idRutas=0;
+        stateMenuItem=true;
+        invalidateOptionsMenu();
         mostrarElementos();
         listaRutas.get(position).dibujarRuta();
     }
@@ -471,6 +473,8 @@ public class MainActivity extends ActionBarActivity
 
             }
             idRutas=0;
+            stateMenuItem=true;
+            invalidateOptionsMenu();
         }
     }
 
