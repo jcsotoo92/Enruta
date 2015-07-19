@@ -18,6 +18,7 @@ import android.support.v4.app.ListFragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,6 +27,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -55,6 +57,7 @@ public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks,Rutas.OnFragmentInteractionListener, Favoritos.OnFragmentFavInteractionListener,SlidingListFragment.OnFragmentInteractionListener {
     LinkedList<SugerenciaDeRuta> sugerenciasRutas;
     Marker origen, destino;
+    boolean stateMenuItem=true;
     GoogleMap mMap;
     FloatingActionButton imageButton, runButton;
     ImageButton refresh;
@@ -95,7 +98,7 @@ public class MainActivity extends ActionBarActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        idMapa = getSupportFragmentManager().findFragmentById(R.id.map).getId();
         refresh = (ImageButton) findViewById(R.id.Refresh);
         imageButton = (FloatingActionButton) findViewById(R.id.myLocationButton);
         runButton = (FloatingActionButton) findViewById(R.id.mainRun);
@@ -105,10 +108,9 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
-        toolbar.setTitle("Enruta");
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        refresh.setOnClickListener(new View.OnClickListener() {
+        toolbar.setTitle("Enruta");
+        /*refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(mMap!=null)
@@ -118,7 +120,7 @@ public class MainActivity extends ActionBarActivity
 
                 getFragmentManager().popBackStack();
             }
-        });
+        });*/
         runButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -220,7 +222,11 @@ public class MainActivity extends ActionBarActivity
         mMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
             @Override
             public void onMapLongClick(LatLng latLng) {
-                ponerMarkersOrigenDestino(latLng, adressPicker(latLng.latitude, latLng.longitude), "");
+                if(favoritos){
+                    mostrarAlertDialog(latLng);
+                }else{
+                    ponerMarkersOrigenDestino(latLng,"","");
+                }
             }
         });
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
@@ -245,23 +251,29 @@ public class MainActivity extends ActionBarActivity
         InputMethodManager inputManager = (InputMethodManager) MainActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
         inputManager.hideSoftInputFromWindow(MainActivity.this.getCurrentFocus().getWindowToken(), 0);
     }
-    public String adressPicker(double lat, double lng) {
-        List<Address> addresses = null;
-        String result = null;
-        Geocoder g = new Geocoder(this, Locale.getDefault());
-        Log.d("Coordenadas", lat + "," + lng);
-        try {
-            addresses = g.getFromLocation(lat, lng, 1);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        if (addresses.get(0).getMaxAddressLineIndex() < 0) {
-            String address = addresses.get(0).getAddressLine(0); // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
-            String city = addresses.get(0).getLocality();
-            result = address + " " + city;
-        }
-        return result+"";
-    }
+
+    void mostrarAlertDialog(final LatLng latLng){
+        AlertDialog.Builder builer = new AlertDialog.Builder(this);
+        builer.setTitle("Agregar a favoritos");
+        builer.setMessage("Introduzca el nombre del lugar:");
+        final EditText texto = new EditText(this);
+        texto.setInputType(InputType.TYPE_CLASS_TEXT);
+        builer.setView(texto);
+        builer.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                ponerMarkersOrigenDestino(latLng, texto.getText().toString(), "Marcador personalizado");
+            }
+        });
+        builer.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                favoritos = false;
+            }
+        });
+        builer.show();
+      }
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
@@ -273,12 +285,13 @@ public class MainActivity extends ActionBarActivity
             case 0:
                 toolbar.setTitle("Enruta");
                 if (getSupportFragmentManager().findFragmentById(idRutas) != null) {
-
                     FragmentTransaction transaction = fragmentManager.beginTransaction();
                     transaction.remove(fragmentManager.findFragmentById(idRutas));
                     transaction.commit();
-
-                }mostrarElementos();
+                }
+                idRutas=0;
+                mostrarElementos();
+                mMap.clear();
                 origen=null;
                 destino=null;
                 break;
@@ -308,9 +321,6 @@ public class MainActivity extends ActionBarActivity
         MarkerOptions markerOption = new MarkerOptions();
         if(SphericalUtil.computeDistanceBetween(latLng,new LatLng(27.48389, -109.932402))<=16200){
             if (favoritos) {
-                markerOption.draggable(true);
-                markerOption.position(latLng);
-                Marker favorito = mMap.addMarker(markerOption);
                 ocultarElementos();
                 Fragment f = new Favoritos();
                 getSupportFragmentManager().beginTransaction().replace(R.id.map, f).commit();
@@ -351,18 +361,17 @@ public class MainActivity extends ActionBarActivity
         ocultar.setVisibility(LinearLayout.GONE);
         imageButton.setVisibility(View.GONE);
         runButton.setVisibility(View.GONE);
-        refresh.setVisibility(View.GONE);
+        stateMenuItem=false;
     }
 
     private void mostrarElementos() {
-        mMap.clear();
         LinearLayout ocultar = (LinearLayout) findViewById(R.id.autocompletadoLayout);
         ocultar.setVisibility(LinearLayout.VISIBLE);
         autoCompleteTextView.setText("");
         imageButton.setVisibility(View.VISIBLE);
         runButton.setVisibility(View.VISIBLE);
-        refresh.setVisibility(View.VISIBLE);
-    }
+        stateMenuItem=true;
+   }
 
 
     private void getMyLocation() {
@@ -386,7 +395,12 @@ public class MainActivity extends ActionBarActivity
             // if the drawer is not showing. Otherwise, let the drawer
             // decide what to show in the action bar.
             getMenuInflater().inflate(R.menu.main, menu);
-            System.err.println("ENTRAAAAAAAAAAAAAAAAAAAA");
+            if(stateMenuItem){
+                menu.getItem(0).setVisible(true);
+            }else{
+                menu.getItem(0).setVisible(false);
+            }
+
             return true;
         }
         return super.onCreateOptionsMenu(menu);
@@ -398,7 +412,14 @@ public class MainActivity extends ActionBarActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        if(id == R.id.action_refresh){
+            if(mMap!=null)
+                mMap.clear();
+            origen= null;
+            destino= null;
 
+            getFragmentManager().popBackStack();
+        }
 
         //noinspection SimplifiableIfStatement
 
@@ -416,6 +437,16 @@ public class MainActivity extends ActionBarActivity
         listaRutas.get(position).dibujarRuta();
     }
 
+    public void restaurarMarker(){
+        if(origen!=null) {
+            MarkerOptions markerOptions = new MarkerOptions();
+            markerOptions.draggable(true);
+            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.origen));
+            markerOptions.position(origen.getPosition());
+            mMap.addMarker(markerOptions);
+        }
+    }
+
     @Override
     public void onFragmentFavInteraction(boolean flag, LatLng lat) {
         if (flag) {
@@ -426,7 +457,7 @@ public class MainActivity extends ActionBarActivity
                 FragmentTransaction transaction = fm.beginTransaction();
                 transaction.remove(fm.findFragmentById(idRutas));
                 transaction.commit();
-
+                restaurarMarker();
             }
         } else {
             FragmentManager fm = getSupportFragmentManager();
@@ -435,9 +466,11 @@ public class MainActivity extends ActionBarActivity
                 FragmentTransaction transaction = fm.beginTransaction();
                 transaction.remove(fm.findFragmentById(idRutas));
                 transaction.commit();
+                restaurarMarker();
                 ponerMarkersOrigenDestino(lat,"","");
-            }
 
+            }
+            idRutas=0;
         }
     }
 

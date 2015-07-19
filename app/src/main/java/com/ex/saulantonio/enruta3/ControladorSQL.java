@@ -29,7 +29,7 @@ public class ControladorSQL {
     public long insertarValores(String latLng, String nombre, String descripcion) {
         SQLiteDatabase  database = sqlHelper.getWritableDatabase();
         ContentValues valores = new ContentValues();
-        if(nombre==null) {
+        if(nombre=="") {
             nombre = "Marcador";
             descripcion = "personalizado";
         }

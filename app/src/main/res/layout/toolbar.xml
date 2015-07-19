@@ -11,21 +11,12 @@
 
 
     <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@android:color/transparent">
 
 
-        <ImageButton
-            android:id="@+id/Refresh"
-            android:layout_width="wrap_content"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:clickable="true"
-            android:background="?android:attr/selectableItemBackground"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_refresh"
-            />
+
     </RelativeLayout>
 
 </android.support.v7.widget.Toolbar>
